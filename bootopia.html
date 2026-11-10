@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootopia | Arriyn Azad</title>
+<style>
+:root {
+  --bg:#10151d;
+  --card:#1c2632;
+  --accent:#70e2ce;
+  --text:#f5f7fa;
+  --muted:#b4c0ce;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.7;
+}
+.container {max-width:1100px;margin:auto;padding:0 24px}
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:26px 0;
+  border-bottom:1px solid #344050;
+}
+nav a {color:var(--muted);text-decoration:none}
+nav a:hover {color:var(--accent)}
+.logo {font-weight:800;font-size:20px}
+.logo span {color:var(--accent)}
+.hero {padding:95px 0 80px}
+.eyebrow {
+  color:var(--accent);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+h1 {
+  font-size:clamp(56px,9vw,110px);
+  letter-spacing:-4px;
+  line-height:1.1;
+  margin:14px 0;
+}
+h2 {
+  font-size:clamp(30px,4vw,46px);
+  letter-spacing:-1px;
+  line-height:1.2;
+}
+h3 {font-size:22px}
+p {color:var(--muted)}
+.lead {font-size:21px;max-width:760px}
+section {padding:65px 0;border-top:1px solid #344050}
+.meta {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:45px;
+}
+.meta div {background:var(--card);padding:20px;border-radius:12px}
+.meta strong {display:block;margin-bottom:5px}
+.meta span {color:var(--muted);font-size:14px}
+.grid {display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card {background:var(--card);padding:25px;border-radius:14px}
+.card h3 {margin-top:0}
+.visual {
+  min-height:180px;
+  background:linear-gradient(135deg,#303441,#126e65);
+  border:1px solid #344050;
+  border-radius:14px;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  font-weight:bold;
+}
+.visual img {
+  max-width:100%;
+  max-height:600px;
+  object-fit:contain;
+}
+.image-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.quote {
+  padding:25px;
+  border-left:3px solid var(--accent);
+  background:var(--card);
+  color:#fff;
+  border-radius:0 12px 12px 0;
+}
+footer {padding:35px 0;color:var(--muted)}
+@media(max-width:700px) {
+  .grid,.meta {grid-template-columns:1fr}
+  .image-grid {grid-template-columns:repeat(2,1fr)}
+  .hero {padding:65px 0}
+  h1 {letter-spacing:-2px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<nav>
+  <div class="logo">ARRIYN AZAD<span>.</span></div>
+  <a href="index.html">← Back to Work</a>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="eyebrow">01 / UX Research / Mobile App Design</div>
+  <h1>Bootopia.</h1>
+  <p class="lead">
+    Finding the perfect soccer cleat shouldn't have to be
+    complicated. Bootopia is a mobile app concept designed
+    to help players discover cleats that match their
+    position, playstyle, and preferences.
+  </p>
+  <div class="meta">
+    <div><strong>Role</strong><span>UX/UI Designer</span></div>
+    <div><strong>Tools</strong><span>Figma</span></div>
+    <div><strong>Project</strong><span>Mobile App Concept</span></div>
+  </div>
+</header>
+
+<section>
+  <div class="eyebrow">The Challenge</div>
+  <h2>Finding the right fit.</h2>
+  <p>
+    Soccer players have different needs depending on
+    their position, playing style, preferred materials,
+    and budget. Choosing the right cleat involves more
+    than simply selecting a brand or appearance.
+  </p>
+  <p>
+    My goal was to explore how a personalized discovery
+    experience could help players narrow down their
+    options and make more informed decisions.
+  </p>
+</section>
+
+<section>
+  <div class="eyebrow">01 / Research</div>
+  <h2>Understanding the players.</h2>
+  <p>
+    I conducted interviews with two soccer players,
+    Steven and Rajin, to understand their experiences
+    buying cleats, what qualities mattered most, and
+    the challenges they faced.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <h3>Steven</h3>
+      <p>
+        A midfielder and winger who values comfort,
+        affordability, and the right fit. He described
+        how different positions influence his preference
+        for grip and lightweight cleats.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Rajin</h3>
+      <p>
+        A defensive player who values durability,
+        lightweight construction, and comfort.
+        He considers price important but is willing
+        to invest in cleats that last.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Research Insights</div>
+  <h2>What I learned.</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Comfort and fit</h3>
+      <p>
+        A comfortable fit can influence how confidently
+        players perform on the field.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Playstyle and position</h3>
+      <p>
+        Different positions can influence which
+        qualities players prioritize.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Price and durability</h3>
+      <p>
+        Players consider affordability alongside
+        long-term value and durability.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Player feedback</h3>
+      <p>
+        Both participants expressed interest in
+        reviews or advice from other players
+        before purchasing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">02 / Define</div>
+  <h2>User personas.</h2>
+  <p>
+    I used the research to develop personas representing
+    different player preferences and purchasing needs.
+  </p>
+  <div class="grid">
+    <div class="visual">Steven Persona — Image Coming Soon</div>
+    <div class="visual">Rajin Persona — Image Coming Soon</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">03 / Structure</div>
+  <h2>Mapping the experience.</h2>
+  <p>
+    I created an information architecture and user flow
+    to organize the app and map the journey from
+    selecting preferences to exploring recommended cleats.
+  </p>
+  <div class="grid">
+    <div class="visual">Information Architecture</div>
+    <div class="visual">User Flow</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">04 / Ideation</div>
+  <h2>From sketches to wireframes.</h2>
+  <p>
+    I began with hand-drawn sketches to explore layouts
+    and navigation, then developed low-fidelity wireframes
+    to establish the structure of the app.
+  </p>
+  <div class="grid">
+    <div class="visual">Initial Sketches</div>
+    <div class="visual">Low-Fidelity Wireframes</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">05 / Final UI</div>
+  <h2>Introducing Bootopia.</h2>
+  <p>
+    The high-fidelity design brings together cleat
+    discovery, personalized filters, product details,
+    and saved favorites in a dark interface with
+    teal accents.
+  </p>
+  <div class="image-grid">
+    <div class="visual">Splash Screen</div>
+    <div class="visual">Home Screen</div>
+    <div class="visual">Filters</div>
+    <div class="visual">Product Details</div>
+    <div class="visual">Favorites</div>
+    <div class="visual">Profile</div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">06 / Reflection</div>
+  <h2>What I'd improve next.</h2>
+  <p>
+    This project helped me understand how research
+    findings can guide product features and design
+    decisions. A future iteration could explore
+    player reviews and a durability score to give
+    users more information before choosing cleats.
+  </p>
+  <p>
+    Usability testing would also be an important
+    next step to evaluate how easily players can
+    navigate the app and find relevant cleats.
+  </p>
+</section>
+</main>
+
+<footer>
+  © 2026 Arriyn Azad ·
+  <a href="index.html" style="color:#70e2ce">
+    Back to Portfolio
+  </a>
+</footer>
+</div>
+</body>
+</html>
