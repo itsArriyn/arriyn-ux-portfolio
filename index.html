@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arriyn Azad | UX/UI Designer</title>
+<style>
+:root {
+  --bg: #10151d;
+  --card: #1c2632;
+  --accent: #70e2ce;
+  --text: #f5f7fa;
+  --muted: #b4c0ce;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 24px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid #344050;
+}
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.logo span { color: var(--accent); }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+}
+nav a:hover { color: var(--accent); }
+.hero { padding: 120px 0 110px; }
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+h1 {
+  font-size: clamp(46px, 7vw, 90px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  max-width: 900px;
+  margin: 22px 0;
+}
+h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  letter-spacing: -1.5px;
+}
+p { color: var(--muted); }
+.hero p {
+  max-width: 650px;
+  font-size: 19px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #10151d;
+  font-weight: bold;
+  text-decoration: none;
+}
+section { padding: 75px 0; }
+.section-heading { margin-bottom: 36px; }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.project {
+  background: var(--card);
+  border: 1px solid #344050;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s, border-color .2s;
+}
+.project:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+.preview {
+  min-height: 260px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.bootopia {
+  background: linear-gradient(140deg,#303441,#126e65);
+}
+.bluelock {
+  background: linear-gradient(140deg,#07121d,#10377d);
+}
+.preview strong {
+  font-size: clamp(32px, 4vw, 50px);
+  letter-spacing: -2px;
+}
+.project-copy { padding: 26px; }
+.project-copy small {
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.project-copy h3 {
+  font-size: 29px;
+  margin: 8px 0;
+}
+.project-copy p { margin-bottom: 0; }
+.about {
+  border-top: 1px solid #344050;
+}
+.about p { max-width: 720px; }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.skills span {
+  padding: 9px 15px;
+  background: var(--card);
+  border: 1px solid #344050;
+  border-radius: 8px;
+  font-size: 13px;
+}
+footer {
+  border-top: 1px solid #344050;
+  padding: 30px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+@media(max-width:700px) {
+  .hero { padding: 75px 0; }
+  .projects { grid-template-columns: 1fr; }
+  h1 { letter-spacing: -2px; }
+  nav a { margin-left: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <nav>
+    <div class="logo">ARRIYN AZAD<span>.</span></div>
+    <div>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <main>
+    <header class="hero">
+      <div class="eyebrow">UX/UI Design Portfolio</div>
+      <h1>Designing experiences that feel intuitive.</h1>
+      <p>
+        I'm Arriyn, a UX/UI designer interested in
+        creating thoughtful digital experiences across
+        apps, gaming, and interactive products.
+      </p>
+      <a class="btn" href="#work">Explore My Work ↓</a>
+    </header>
+
+    <section id="work">
+      <div class="eyebrow">Selected Work</div>
+      <h2 class="section-heading">Featured Projects</h2>
+      <div class="projects">
+        <a class="project" href="bootopia.html">
+          <div class="preview bootopia">
+            <strong>BOOTOPIA</strong>
+          </div>
+          <div class="project-copy">
+            <small>01 / Mobile App / UX Research</small>
+            <h3>Bootopia</h3>
+            <p>
+              Helping soccer players find cleats
+              based on their position, playstyle,
+              and personal preferences.
+            </p>
+          </div>
+        </a>
+
+        <a class="project" href="blue-lock.html">
+          <div class="preview bluelock">
+            <strong>BLUE LOCK FC</strong>
+          </div>
+          <div class="project-copy">
+            <small>02 / Game UI / Interaction Design</small>
+            <h3>Blue Lock FC</h3>
+            <p>
+              An anime-inspired football game menu
+              focused on intuitive navigation,
+              contextual information, and user testing.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="eyebrow">About Me</div>
+      <h2>Design meets curiosity.</h2>
+      <p>
+        With a background in psychology and UX/UI
+        design training at BrainStation, I enjoy
+        understanding how people think and
+        translating those insights into digital
+        experiences.
+      </p>
+      <div class="skills">
+        <span>Figma</span>
+        <span>Wireframing</span>
+        <span>Prototyping</span>
+        <span>User Research</span>
+        <span>Usability Testing</span>
+        <span>Photoshop</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's connect.</h2>
+      <p>
+        Interested in my work? Feel free to reach out.
+      </p>
+      <p>Contact details coming soon.</p>
+    </section>
+  </main>
+  <footer>
+    © 2026 Arriyn Azad. UX/UI Portfolio.
+  </footer>
+</div>
+</body>
+</html>
