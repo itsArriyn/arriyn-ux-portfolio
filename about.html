@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Learn about Arriyn Azad, an aspiring UX/UI designer with a background in psychology.">
+<title>About Me | Arriyn Azad</title>
+
+<style>
+:root {
+  --bg: #0b1220;
+  --card: #152238;
+  --accent: #3d9cff;
+  --text: #f5f7fa;
+  --muted: #afbed2;
+  --border: #293b55;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 28px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo span { color: var(--accent); }
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 85px;
+  align-items: center;
+  padding: 100px 0;
+}
+
+h1 {
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.1;
+  letter-spacing: -3px;
+  margin: 20px 0 28px;
+}
+
+h1 span { color: var(--accent); }
+
+.intro {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.photo-wrapper {
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+}
+
+.photo-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 18px -14px -18px 14px;
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+.about-photo {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 16px;
+}
+
+section {
+  padding: 65px 0;
+  border-top: 1px solid var(--border);
+}
+
+h2 {
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 14px 0 22px;
+}
+
+.section-text {
+  max-width: 790px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.skills span {
+  padding: 11px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.interests {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.interest {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.interest h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.interest p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 24px;
+  border-radius: 30px;
+  background: var(--accent);
+  color: #07101e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  background: #70b7ff;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 65px 0;
+  }
+
+  .photo-wrapper {
+    max-width: 350px;
+  }
+
+  .interests {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container { padding: 0 20px; }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 18px;
+  }
+
+  h1 { letter-spacing: -2px; }
+
+  .interests {
+    grid-template-columns: 1fr;
+  }
+
+  section { padding: 50px 0; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <nav>
+    <a class="logo" href="index.html">
+      ARRIYN AZAD<span>.</span>
+    </a>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Work</a>
+      <a class="active" href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="about-hero">
+      <div>
+        <div class="eyebrow">Get to know me</div>
+
+        <h1>Hey, I'm <span>Arriyn.</span></h1>
+
+        <p class="intro">
+          I'm an aspiring UX/UI designer who
+          believes great design starts with
+          understanding people.
+        </p>
+
+        <p>
+          My background in psychology has shaped
+          how I approach design. I'm interested in
+          understanding why people make certain
+          decisions, how they interact with digital
+          products, and how thoughtful design can
+          make those experiences better.
+        </p>
+
+        <p>
+          I completed the UX/UI Design Bootcamp at
+          BrainStation, where I developed hands-on
+          experience in user research, wireframing,
+          prototyping, and usability testing.
+        </p>
+
+        <p>
+          I enjoy combining research, creativity,
+          and problem-solving to turn ideas into
+          intuitive, meaningful digital experiences.
+        </p>
+      </div>
+
+      <div class="photo-wrapper">
+        <img
+          class="about-photo"
+          src="arriyn-about.jpg"
+          alt="Arriyn Azad wearing a red jersey"
+          loading="eager">
+      </div>
+    </header>
+
+    <section>
+      <div class="eyebrow">My Approach</div>
+      <h2>Designing with purpose.</h2>
+
+      <div class="section-text">
+        <p>
+          To me, UX/UI design is more than making
+          something visually appealing. It's about
+          identifying real problems, listening to
+          users, and designing solutions that feel
+          natural and easy to use.
+        </p>
+
+        <p>
+          Whether I'm working on a mobile app or
+          exploring game interfaces, I aim to
+          create experiences that balance
+          functionality, usability, and visual design.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">My Toolkit</div>
+      <h2>Skills & Tools</h2>
+
+      <div class="skills">
+        <span>Figma</span>
+        <span>Adobe Photoshop</span>
+        <span>User Research</span>
+        <span>Wireframing</span>
+        <span>Prototyping</span>
+        <span>Usability Testing</span>
+        <span>Information Architecture</span>
+        <span>User Flows</span>
+        <span>Interaction Design</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Beyond Design</div>
+      <h2>A little more about me.</h2>
+
+      <p class="section-text">
+        Outside of UX/UI design, I enjoy exploring
+        different creative outlets and interests
+        that continue to inspire my work.
+      </p>
+
+      <div class="interests">
+        <div class="interest">
+          <h3>Soccer</h3>
+          <p>
+            A longtime passion that also inspired
+            my Bootopia project.
+          </p>
+        </div>
+
+        <div class="interest">
+          <h3>Photography</h3>
+          <p>
+            Capturing streets, cars, and everyday
+            moments through my perspective.
+          </p>
+        </div>
+
+        <div class="interest">
+          <h3>Gaming</h3>
+          <p>
+            Exploring interactive experiences,
+            game interfaces, and storytelling.
+          </p>
+        </div>
+
+        <div class="interest">
+          <h3>Creativity</h3>
+          <p>
+            Experimenting with visual ideas
+            and learning new design techniques.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Explore My Work</div>
+      <h2>See what I've been designing.</h2>
+
+      <p>
+        Take a look at my UX/UI projects,
+        design process, and case studies.
+      </p>
+
+      <a class="back-link" href="index.html#work">
+        View My Projects →
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Arriyn Azad. UX/UI Portfolio.
+  </footer>
+
+</div>
+</body>
+</html>
