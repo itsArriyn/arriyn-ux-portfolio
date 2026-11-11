@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Blue Lock FC game UI case study by Arriyn Azad.">
 <title>Blue Lock FC | Arriyn Azad</title>
 <style>
 :root {
@@ -12,6 +13,7 @@
   --accent:#6b9cff;
   --text:#f5f7fa;
   --muted:#b4c0ce;
+  --border:#344050;
 }
 * {box-sizing:border-box}
 html {scroll-behavior:smooth}
@@ -22,15 +24,22 @@ body {
   font-family:Arial,Helvetica,sans-serif;
   line-height:1.7;
 }
-.container {max-width:1100px;margin:auto;padding:0 24px}
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:0 24px;
+}
 nav {
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:26px 0;
-  border-bottom:1px solid #344050;
+  border-bottom:1px solid var(--border);
 }
-nav a {color:var(--muted);text-decoration:none}
+nav a {
+  color:var(--muted);
+  text-decoration:none;
+}
 nav a:hover {color:var(--accent)}
 .logo {font-weight:800;font-size:20px}
 .logo span {color:var(--accent)}
@@ -56,37 +65,66 @@ h2 {
 h3 {font-size:22px}
 p {color:var(--muted)}
 .lead {font-size:21px;max-width:760px}
-section {padding:65px 0;border-top:1px solid #344050}
+section {
+  padding:65px 0;
+  border-top:1px solid var(--border);
+}
 .meta {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
   margin-top:45px;
 }
-.meta div {background:var(--card);padding:20px;border-radius:12px}
+.meta div {
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+}
 .meta strong {display:block;margin-bottom:5px}
 .meta span {color:var(--muted);font-size:14px}
-.grid {display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.card {background:var(--card);padding:25px;border-radius:14px}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+.card {
+  background:var(--card);
+  padding:25px;
+  border-radius:14px;
+}
 .card h3 {margin-top:0}
 .visual {
-  min-height:180px;
-  background:linear-gradient(135deg,#222b3b,#163f79);
-  border:1px solid #344050;
+  background:var(--card);
+  border:1px solid var(--border);
   border-radius:14px;
-  padding:24px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-  font-weight:bold;
+  padding:16px;
+  overflow:hidden;
 }
-.visual img {width:100%;height:auto;object-fit:contain}
+.visual img {
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:7px;
+}
+.visual figcaption {
+  color:var(--muted);
+  font-size:13px;
+  padding:12px 4px 2px;
+}
+figure {margin:0}
 .image-grid {
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:20px;
+}
+.full-image {
+  max-width:100%;
+  margin-top:25px;
+}
+.section-intro {
+  max-width:780px;
+  margin-bottom:30px;
 }
 .button {
   display:inline-block;
@@ -97,7 +135,12 @@ section {padding:65px 0;border-top:1px solid #344050}
   font-weight:bold;
   border-radius:9px;
 }
-footer {padding:35px 0;color:var(--muted)}
+.button:hover {background:#91b5ff}
+footer {
+  padding:35px 0;
+  color:var(--muted);
+}
+footer a {color:var(--accent)}
 @media(max-width:700px) {
   .grid,.meta,.image-grid {grid-template-columns:1fr}
   .hero {padding:65px 0}
@@ -107,6 +150,7 @@ footer {padding:35px 0;color:var(--muted)}
 </head>
 <body>
 <div class="container">
+
 <nav>
   <div class="logo">ARRIYN AZAD<span>.</span></div>
   <a href="index.html">← Back to Work</a>
@@ -118,56 +162,66 @@ footer {padding:35px 0;color:var(--muted)}
   <h1>Blue Lock FC.</h1>
   <p class="lead">
     A football game menu concept inspired by the
-    Blue Lock anime, combining familiar navigation
+    Blue Lock anime, combining intuitive navigation
     with character-driven visuals and interactive
     menu descriptions.
   </p>
+
   <div class="meta">
-    <div><strong>Role</strong><span>UX/UI Designer</span></div>
-    <div><strong>Tools</strong><span>Figma</span></div>
-    <div><strong>Project</strong><span>Game Menu Concept</span></div>
+    <div>
+      <strong>Role</strong>
+      <span>UX/UI Designer</span>
+    </div>
+    <div>
+      <strong>Tools</strong>
+      <span>Figma</span>
+    </div>
+    <div>
+      <strong>Project</strong>
+      <span>Game Menu Concept</span>
+    </div>
   </div>
 </header>
 
 <section>
   <div class="eyebrow">The Challenge</div>
   <h2>Making menus feel like part of the game.</h2>
-  <p>
+  <p class="section-intro">
     My goal was to create a football game menu
     that was easy to understand while capturing
     the energy and competitive atmosphere of
     Blue Lock.
   </p>
   <p>
-    The design focuses on clear menu options,
-    character visuals, and descriptions that
-    explain what each mode offers.
+    The design focuses on recognizable menu options,
+    character visuals, and descriptions that help
+    players understand what each game mode offers.
   </p>
 </section>
 
 <section>
   <div class="eyebrow">01 / Research</div>
-  <h2>Looking at existing football games.</h2>
-  <p>
-    I explored the menu experiences of EA Sports FC 24
-    and eFootball to compare navigation, visual
-    hierarchy, and how different game modes
-    are presented.
+  <h2>Exploring football game interfaces.</h2>
+  <p class="section-intro">
+    I explored existing football game interfaces,
+    including EA Sports FC 24 and eFootball, to
+    consider menu navigation, visual hierarchy,
+    and how game modes are presented.
   </p>
+
   <div class="grid">
     <div class="card">
       <h3>EA Sports FC 24</h3>
       <p>
-        A reference point for organizing different
-        football game modes and menu navigation.
+        A reference for organizing football game
+        modes and navigation.
       </p>
     </div>
     <div class="card">
       <h3>eFootball</h3>
       <p>
-        A second reference for understanding
-        how football games present their
-        primary options.
+        A reference for how football games present
+        their primary menu options.
       </p>
     </div>
   </div>
@@ -176,111 +230,190 @@ footer {padding:35px 0;color:var(--muted)}
 <section>
   <div class="eyebrow">02 / Define</div>
   <h2>Designing for the player.</h2>
-  <p>
-    I developed a player persona to help
-    consider gaming preferences, familiarity
-    with controllers, and expectations when
-    navigating a football game menu.
+  <p class="section-intro">
+    I developed a player persona to consider
+    gaming preferences, navigation expectations,
+    and how players interact with football game
+    menus.
   </p>
-  
-<div class="visual">
-  <img src="Group 1 (1).png" alt="Blue Lock FC user persona">
-</div>
 
+  <figure class="visual full-image">
+    <img
+      src="Group 1 (1).png"
+      alt="Blue Lock FC player persona"
+      loading="lazy">
+    <figcaption>Player persona</figcaption>
+  </figure>
 </section>
 
 <section>
   <div class="eyebrow">03 / User Flow</div>
   <h2>Mapping the menu experience.</h2>
-  <p>
-    The menu includes KickOff, My Team,
-    Online, and Settings. Selecting an option
-    reveals a description and changes the
-    visual presentation before the player
-    enters the chosen mode.
+  <p class="section-intro">
+    The interface features four main options:
+    KickOff, My Team, Online, and Settings.
+    The user flow explores how players navigate
+    through the menu experience.
   </p>
-  <div class="visual">Blue Lock User Flow — Image Coming Soon</div>
+
+  <figure class="visual full-image">
+    <img
+      src="BlueLock FC User flow.png"
+      alt="Blue Lock FC user flow diagram"
+      loading="lazy">
+    <figcaption>User flow diagram</figcaption>
+  </figure>
 </section>
 
 <section>
   <div class="eyebrow">04 / Wireframing</div>
   <h2>From structure to visual design.</h2>
-  <p>
-    I created low-fidelity wireframes to explore
-    the placement of menu buttons, mode descriptions,
-    and background artwork before developing
-    the final interface.
+  <p class="section-intro">
+    Before creating the final interface, I explored
+    different menu layouts through low-fidelity
+    wireframes. These helped me experiment with
+    button placement, navigation hierarchy, and
+    selected-mode descriptions.
   </p>
-  <div class="grid">
-    <div class="visual">Low-Fidelity Wireframe</div>
-    <div class="visual">Additional Wireframe</div>
+
+  <h3>Low-Fidelity Wireframes</h3>
+  <div class="image-grid">
+    <figure class="visual">
+      <img
+        src="Frame 5 (2).png"
+        alt="Horizontal Blue Lock FC menu wireframe"
+        loading="lazy">
+      <figcaption>
+        Horizontal menu layout
+      </figcaption>
+    </figure>
+
+    <figure class="visual">
+      <img
+        src="Frame 3.png"
+        alt="Grid-based Blue Lock FC menu wireframe"
+        loading="lazy">
+      <figcaption>
+        Grid-based menu layout
+      </figcaption>
+    </figure>
   </div>
+
+  <h3>Additional Wireframe</h3>
+  <figure class="visual full-image">
+    <img
+      src="Blue Lock FC wire frame 2.png"
+      alt="Additional Blue Lock FC wireframe"
+      loading="lazy">
+    <figcaption>
+      Additional interface exploration
+    </figcaption>
+  </figure>
 </section>
 
 <section>
   <div class="eyebrow">05 / Final UI</div>
   <h2>The Blue Lock FC experience.</h2>
-  <p>
-    The final concept uses Blue Lock character
-    artwork, bold typography, and a blue-accented
-    menu. Each selected mode displays a description
-    to help players understand their options.
+  <p class="section-intro">
+    The high-fidelity designs bring the concept
+    to life through Blue Lock-inspired imagery,
+    bold typography, and a distinctive
+    football game interface.
   </p>
+
   <div class="image-grid">
-    <div class="visual">Start Screen</div>
-    <div class="visual">Main Menu</div>
-    <div class="visual">KickOff Selected</div>
-    <div class="visual">My Team Selected</div>
-    <div class="visual">Online Selected</div>
-    <div class="visual">Settings Selected</div>
+    <figure class="visual">
+      <img
+        src="Frame 4 (2).png"
+        alt="Blue Lock FC high-fidelity design 1"
+        loading="lazy">
+      <figcaption>Final UI — Screen 01</figcaption>
+    </figure>
+
+    <figure class="visual">
+      <img
+        src="Frame 5 (1).png"
+        alt="Blue Lock FC high-fidelity design 2"
+        loading="lazy">
+      <figcaption>Final UI — Screen 02</figcaption>
+    </figure>
+
+    <figure class="visual">
+      <img
+        src="Frame 6 (1).png"
+        alt="Blue Lock FC high-fidelity design 3"
+        loading="lazy">
+      <figcaption>Final UI — Screen 03</figcaption>
+    </figure>
+
+    <figure class="visual">
+      <img
+        src="Frame 7.png"
+        alt="Blue Lock FC high-fidelity design 4"
+        loading="lazy">
+      <figcaption>Final UI — Screen 04</figcaption>
+    </figure>
+
+    <figure class="visual">
+      <img
+        src="Frame 8.png"
+        alt="Blue Lock FC high-fidelity design 5"
+        loading="lazy">
+      <figcaption>Final UI — Screen 05</figcaption>
+    </figure>
+
+    <figure class="visual">
+      <img
+        src="Frame 9.png"
+        alt="Blue Lock FC high-fidelity design 6"
+        loading="lazy">
+      <figcaption>Final UI — Screen 06</figcaption>
+    </figure>
   </div>
 </section>
 
 <section>
   <div class="eyebrow">06 / Usability Testing</div>
   <h2>Testing the navigation.</h2>
-  <p>
-    I tested the menu concept with three
-    participants, asking them to identify
-    screens and explain how they would
-    access different features.
+  <p class="section-intro">
+    I used navigation tasks to evaluate whether
+    players could understand the menu options
+    and locate different features.
   </p>
+
   <div class="grid">
     <div class="card">
-      <h3>Finding a game mode</h3>
+      <h3>Starting a match</h3>
       <p>
-        Participants were asked how they
-        would start playing a match.
+        How would a player begin a football match?
       </p>
     </div>
     <div class="card">
       <h3>Playing online</h3>
       <p>
-        Participants were asked how they
-        would access online play with friends.
+        How would a player access online play
+        with friends?
       </p>
     </div>
     <div class="card">
       <h3>Changing controls</h3>
       <p>
-        Participants were asked how they
-        would change the button assigned
-        to passing.
+        How would a player change the button
+        assigned to passing?
       </p>
     </div>
     <div class="card">
       <h3>Understanding the interface</h3>
       <p>
-        Participants were asked to identify
-        the screen and interpret the
-        available navigation options.
+        Can players recognize the menu and
+        interpret its available options?
       </p>
     </div>
   </div>
+
   <p>
-    The responses helped me evaluate whether
-    the menu labels and navigation were
-    understandable to players.
+    These tasks helped assess the clarity
+    of the menu labels and overall navigation.
   </p>
 </section>
 
@@ -288,12 +421,15 @@ footer {padding:35px 0;color:var(--muted)}
   <div class="eyebrow">07 / Interactive Prototype</div>
   <h2>Explore the prototype.</h2>
   <p>
-    View the original interactive menu
-    concept in Figma.
+    Experience the original interactive
+    Blue Lock FC menu concept in Figma.
   </p>
-  <a class="button"
-     href="https://www.figma.com/proto/TPX6G3PsNv36fzft4mwaVi/Blue-Lock-FC-wire-frame-2--Copy-?node-id=2025-2&amp;p=f&amp;t=T5OOPYqI63fUd2aU-1&amp;scaling=contain&amp;content-scaling=fixed&amp;page-id=0%3A1"
-     target="_blank" rel="noopener noreferrer">
+
+  <a
+    class="button"
+    href="https://www.figma.com/proto/TPX6G3PsNv36fzft4mwaVi/Blue-Lock-FC-wire-frame-2--Copy-?node-id=2025-2&amp;p=f&amp;t=T5OOPYqI63fUd2aU-1&amp;scaling=contain&amp;content-scaling=fixed&amp;page-id=0%3A1"
+    target="_blank"
+    rel="noopener noreferrer">
     View Figma Prototype ↗
   </a>
 </section>
@@ -302,22 +438,22 @@ footer {padding:35px 0;color:var(--muted)}
   <div class="eyebrow">08 / Reflection</div>
   <h2>What I learned.</h2>
   <p>
-    This project gave me experience designing
-    a game interface that balances visual
-    personality with clear navigation.
-    It also reinforced the importance of
-    testing whether users understand menu
-    labels and can find the features they need.
+    This project allowed me to explore how
+    visual identity and usability work together
+    in game interface design. I practiced
+    developing different menu layouts,
+    building a high-fidelity interface,
+    and considering how users navigate
+    between game modes.
   </p>
 </section>
 </main>
 
 <footer>
   © 2026 Arriyn Azad ·
-  <a href="index.html" style="color:#6b9cff">
-    Back to Portfolio
-  </a>
+  <a href="index.html">Back to Portfolio</a>
 </footer>
+
 </div>
 </body>
 </html>
