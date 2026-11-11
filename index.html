@@ -59,9 +59,10 @@ nav a {
   transition: color .2s;
 }
 
-nav a:hover { color: var(--accent); }
-
-nav a.active { color: var(--accent); }
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
 
 .hero {
   display: grid;
@@ -72,7 +73,10 @@ nav a.active { color: var(--accent); }
   position: relative;
 }
 
-.hero-content { position: relative; z-index: 1; }
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
 
 .eyebrow {
   color: var(--accent);
@@ -179,7 +183,9 @@ h2 {
   line-height: 1.2;
 }
 
-.section-heading { margin: 12px 0 36px; }
+.section-heading {
+  margin: 12px 0 36px;
+}
 
 p { color: var(--muted); }
 
@@ -225,6 +231,7 @@ p { color: var(--muted); }
 }
 
 .bootopia { background: #303441; }
+
 .bluelock { background: #07121d; }
 
 .project-copy {
@@ -243,30 +250,8 @@ p { color: var(--muted); }
   margin: 8px 0;
 }
 
-.project-copy p { margin-bottom: 0; }
-
-.about {
-  border-top: 1px solid var(--border);
-}
-
-.about p {
-  max-width: 750px;
-  font-size: 17px;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
-}
-
-.skills span {
-  padding: 9px 15px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 13px;
+.project-copy p {
+  margin-bottom: 0;
 }
 
 #contact {
@@ -281,9 +266,7 @@ footer {
 }
 
 @media (max-width: 950px) {
-  .hero {
-    gap: 35px;
-  }
+  .hero { gap: 35px; }
 
   h1 {
     font-size: clamp(40px, 5vw, 60px);
@@ -310,9 +293,7 @@ footer {
     padding: 70px 0 65px;
   }
 
-  .hero-content {
-    text-align: center;
-  }
+  .hero-content { text-align: center; }
 
   .hero-tagline,
   .hero-description {
@@ -365,7 +346,7 @@ footer {
     <div>
       <a class="active" href="#home">Home</a>
       <a href="#work">Work</a>
-      <a href="#about">About</a>
+      <a href="about.html">About</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -400,7 +381,7 @@ footer {
             View My Work →
           </a>
 
-          <a class="btn btn-outline" href="#about">
+          <a class="btn btn-outline" href="about.html">
             About Me
           </a>
         </div>
@@ -419,6 +400,7 @@ footer {
 
     <section id="work">
       <div class="eyebrow">Selected Work</div>
+
       <h2 class="section-heading">
         Featured Projects
       </h2>
@@ -471,42 +453,6 @@ footer {
           </div>
         </a>
 
-      </div>
-    </section>
-
-    <section id="about" class="about">
-      <div class="eyebrow">About Me</div>
-
-      <h2>Design meets curiosity.</h2>
-
-      <p>
-        I'm an aspiring UX/UI designer with a background
-        in psychology and a passion for creating
-        meaningful digital experiences.
-      </p>
-
-      <p>
-        Through my UX/UI design training at BrainStation,
-        I've developed experience in user research,
-        wireframing, prototyping, and usability testing.
-        I enjoy understanding how people think and
-        translating those insights into thoughtful,
-        intuitive designs.
-      </p>
-
-      <p>
-        Outside of design, you'll usually find me
-        playing soccer, exploring photography,
-        gaming, or finding inspiration in everyday life.
-      </p>
-
-      <div class="skills">
-        <span>Figma</span>
-        <span>Wireframing</span>
-        <span>Prototyping</span>
-        <span>User Research</span>
-        <span>Usability Testing</span>
-        <span>Photoshop</span>
       </div>
     </section>
 
