@@ -189,6 +189,27 @@ h2 {
 
 p { color: var(--muted); }
 
+/* Project categories */
+.project-category {
+  margin-top: 48px;
+}
+
+.project-category:first-of-type {
+  margin-top: 0;
+}
+
+.category-heading {
+  font-size: clamp(23px, 3vw, 30px);
+  letter-spacing: -.5px;
+  margin: 0 0 8px;
+}
+
+.category-description {
+  margin: 0 0 24px;
+  max-width: 700px;
+  font-size: 15px;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -232,6 +253,12 @@ p { color: var(--muted); }
 
 .bootopia { background: #303441; }
 
+.advenza { background: #211a3a; }
+
+.advenza img {
+  object-fit: contain;
+}
+
 .bluelock { background: #07121d; }
 
 .project-copy {
@@ -252,6 +279,19 @@ p { color: var(--muted); }
 
 .project-copy p {
   margin-bottom: 0;
+}
+
+.project-status {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 5px 11px;
+  border: 1px solid #c18aff;
+  border-radius: 20px;
+  color: #d7b4ff;
+  background: rgba(193, 138, 255, .08);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .3px;
 }
 
 /* Contact section */
@@ -351,6 +391,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .project-category {
+    margin-top: 42px;
+  }
+
   section { padding: 55px 0; }
 
   h1 { letter-spacing: -2px; }
@@ -439,54 +483,105 @@ footer {
         Featured Projects
       </h2>
 
-      <div class="projects">
+      <div class="project-category">
+        <h3 class="category-heading">UX/UI App Design</h3>
+        <p class="category-description">
+          Digital product concepts focused on user needs,
+          thoughtful interactions, and intuitive experiences.
+        </p>
 
-        <a class="project" href="bootopia.html">
-          <div class="preview bootopia">
-            <img
-              src="bootopia-home-cover.png"
-              alt="Bootopia logo"
-              loading="lazy">
-          </div>
+        <div class="projects">
 
-          <div class="project-copy">
-            <small>
-              01 / Mobile App / UX Research
-            </small>
+          <a class="project" href="bootopia.html">
+            <div class="preview bootopia">
+              <img
+                src="bootopia-home-cover.png"
+                alt="Bootopia logo"
+                loading="lazy">
+            </div>
 
-            <h3>Bootopia</h3>
+            <div class="project-copy">
+              <small>
+                01 / Mobile App / UX Research
+              </small>
 
-            <p>
-              Helping soccer players find cleats
-              based on their position, playstyle,
-              and personal preferences.
-            </p>
-          </div>
-        </a>
+              <h3>Bootopia</h3>
 
-        <a class="project" href="blue-lock.html">
-          <div class="preview bluelock">
-            <img
-              src="blue-lock-home-cover.png"
-              alt="Blue Lock FC start screen"
-              loading="lazy">
-          </div>
+              <p>
+                Helping soccer players find cleats
+                based on their position, playstyle,
+                and personal preferences.
+              </p>
+            </div>
+          </a>
 
-          <div class="project-copy">
-            <small>
-              02 / Game UI / Interaction Design
-            </small>
+          <a class="project" href="advenza.html">
+            <div class="preview advenza">
+              <img
+                src="advenza-welcome.png"
+                alt="Advenza travel planning app welcome screen"
+                loading="lazy">
+            </div>
 
-            <h3>Blue Lock FC</h3>
+            <div class="project-copy">
+              <small>
+                02 / Travel App / UX/UI Design
+              </small>
 
-            <p>
-              An anime-inspired football game menu
-              focused on intuitive navigation,
-              contextual information, and user testing.
-            </p>
-          </div>
-        </a>
+              <h3>Advenza</h3>
 
+              <p>
+                A travel adventure planner designed
+                to help people discover experiences,
+                personalize itineraries, and revisit
+                their favorite memories.
+              </p>
+
+              <span class="project-status">
+                Work in Progress
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="project-category">
+        <h3 class="category-heading">
+          Game UI &amp; Interface Design
+        </h3>
+
+        <p class="category-description">
+          Game interface concepts exploring navigation,
+          visual storytelling, and interactive experiences.
+        </p>
+
+        <div class="projects">
+
+          <a class="project" href="blue-lock.html">
+            <div class="preview bluelock">
+              <img
+                src="blue-lock-home-cover.png"
+                alt="Blue Lock FC start screen"
+                loading="lazy">
+            </div>
+
+            <div class="project-copy">
+              <small>
+                03 / Game UI / Interaction Design
+              </small>
+
+              <h3>Blue Lock FC</h3>
+
+              <p>
+                An anime-inspired football game menu
+                focused on intuitive navigation,
+                contextual information, and user testing.
+              </p>
+            </div>
+          </a>
+
+        </div>
       </div>
     </section>
 
