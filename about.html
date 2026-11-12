@@ -159,28 +159,64 @@ h2 {
   font-size: 14px;
 }
 
-.interests {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 28px;
+/* Personal photography gallery */
+.gallery {
+  margin-top: 36px;
 }
 
-.interest {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 24px;
-}
-
-.interest h3 {
-  margin: 0 0 8px;
-  font-size: 19px;
-}
-
-.interest p {
-  font-size: 14px;
+.gallery-featured,
+.gallery-pair figure {
   margin: 0;
+}
+
+.gallery-featured img,
+.gallery-pair img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.gallery-featured img {
+  max-height: 620px;
+  object-fit: contain;
+  background: var(--card);
+}
+
+.gallery-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+.gallery-pair img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery figcaption {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 5px;
+}
+
+.instagram-link:hover {
+  border-bottom-color: var(--accent);
 }
 
 .back-link {
@@ -215,10 +251,6 @@ footer {
   .photo-wrapper {
     max-width: 350px;
   }
-
-  .interests {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 500px) {
@@ -236,8 +268,9 @@ footer {
 
   h1 { letter-spacing: -2px; }
 
-  .interests {
+  .gallery-pair {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   section { padding: 50px 0; }
@@ -301,7 +334,7 @@ footer {
       <div class="photo-wrapper">
         <img
           class="about-photo"
-         src="arriyn-about.jpg.jpg"
+          src="arriyn-about.jpg.jpg"
           alt="Arriyn Azad wearing a red jersey"
           loading="eager">
       </div>
@@ -348,47 +381,53 @@ footer {
 
     <section>
       <div class="eyebrow">Beyond Design</div>
-      <h2>A little more about me.</h2>
+      <h2>Life Through My Lens.</h2>
 
       <p class="section-text">
-        Outside of UX/UI design, I enjoy exploring
-        different creative outlets and interests
-        that continue to inspire my work.
+        Outside of design, I enjoy capturing the world
+        through my lens. From automotive photography to
+        everyday street scenes, photography gives me
+        another way to explore creativity and perspective.
       </p>
 
-      <div class="interests">
-        <div class="interest">
-          <h3>Soccer</h3>
-          <p>
-            A longtime passion that also inspired
-            my Bootopia project.
-          </p>
-        </div>
+      <div class="gallery">
 
-        <div class="interest">
-          <h3>Photography</h3>
-          <p>
-            Capturing streets, cars, and everyday
-            moments through my perspective.
-          </p>
-        </div>
+        <figure class="gallery-featured">
+          <img
+            src="skyline-r34.jpg"
+            alt="Blue Nissan Skyline GT-R R34 at a car show"
+            loading="lazy">
+          <figcaption>Automotive photography — Nissan Skyline GT-R R34</figcaption>
+        </figure>
 
-        <div class="interest">
-          <h3>Gaming</h3>
-          <p>
-            Exploring interactive experiences,
-            game interfaces, and storytelling.
-          </p>
-        </div>
+        <div class="gallery-pair">
 
-        <div class="interest">
-          <h3>Creativity</h3>
-          <p>
-            Experimenting with visual ideas
-            and learning new design techniques.
-          </p>
+          <figure>
+            <img
+              src="orange-car.jpg"
+              alt="Orange sports car photographed at an indoor automotive event"
+              loading="lazy">
+            <figcaption>Automotive photography — Orange sports car</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="cable-car.jpg"
+              alt="Suspended cable car above a city street under a cloudy sky"
+              loading="lazy">
+            <figcaption>Street photography — Moments in motion</figcaption>
+          </figure>
+
         </div>
       </div>
+
+      <a
+        class="instagram-link"
+        href="https://www.instagram.com/by.arriyn/"
+        target="_blank"
+        rel="noopener noreferrer">
+        View More on Instagram ↗
+      </a>
     </section>
 
     <section>
