@@ -159,9 +159,13 @@ h2 {
   font-size: 14px;
 }
 
+
 /* Personal photography gallery */
 .gallery {
-  margin-top: 36px;
+  margin-top: 26px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gallery-featured,
@@ -173,34 +177,35 @@ h2 {
 .gallery-pair img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .gallery-featured img {
-  max-height: 620px;
-  object-fit: contain;
-  background: var(--card);
+  height: 300px;
+  object-fit: cover;
+  object-position: center 55%;
 }
 
 .gallery-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  gap: 14px;
+  margin-top: 14px;
   align-items: start;
 }
 
 .gallery-pair img {
-  width: 100%;
-  height: auto;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .gallery figcaption {
   color: var(--muted);
-  font-size: 13px;
-  margin-top: 10px;
+  font-size: 12px;
+  margin-top: 8px;
 }
+
 
 .instagram-link {
   display: inline-flex;
