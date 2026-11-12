@@ -254,8 +254,42 @@ p { color: var(--muted); }
   margin-bottom: 0;
 }
 
+/* Contact section */
 #contact {
   border-top: 1px solid var(--border);
+  padding: 85px 0;
+}
+
+#contact p {
+  max-width: 560px;
+  margin-bottom: 28px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 13px 24px;
+  border: 1px solid var(--accent);
+  border-radius: 30px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background .2s, color .2s, transform .2s;
+}
+
+.contact-links a:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-2px);
 }
 
 footer {
@@ -457,16 +491,28 @@ footer {
     </section>
 
     <section id="contact">
-      <div class="eyebrow">Contact</div>
+      <div class="eyebrow">Get in touch</div>
 
-      <h2>Let's connect.</h2>
+      <h2>Let's Connect.</h2>
 
       <p>
-        Interested in my work?
-        Feel free to reach out.
+        I'm always open to new opportunities,
+        collaborations, and conversations.
+        Feel free to reach out!
       </p>
 
-      <p>Contact details coming soon.</p>
+      <div class="contact-links">
+        <a href="mailto:arriynazad@yahoo.com">
+          Email Me ↗
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/arriynazad"
+          target="_blank"
+          rel="noopener noreferrer">
+          LinkedIn ↗
+        </a>
+      </div>
     </section>
 
   </main>
