@@ -91,7 +91,8 @@ h1 {
   line-height: 1.1;
   letter-spacing: -3px;
   margin: 20px 0;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: normal;
 }
 
 h1 span { color: var(--accent); }
@@ -340,7 +341,7 @@ footer {
 }
 
 @media (max-width: 950px) {
-  .hero { gap: 35px; }
+  .hero { gap: 35px; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
 
   h1 {
     font-size: clamp(40px, 5vw, 60px);
@@ -391,6 +392,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .preview img { object-fit: contain; }
+  .preview { background: var(--card); }
+  .project-copy { padding: 22px; }
+
   .project-category {
     margin-top: 42px;
   }
@@ -408,7 +413,19 @@ footer {
     margin-right: 12px;
   }
 
-  h1 { font-size: 42px; }
+  h1 { font-size: clamp(34px, 10vw, 42px); }
+  .hero-photo-frame { width: min(72vw, 270px); }
+}
+/* Accessible keyboard navigation and reduced-motion preferences */
+a:focus-visible { outline: 3px solid #a8d5ff; outline-offset: 4px; border-radius: 4px; }
+.project:focus-visible { outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+@media (min-width: 701px) and (max-width: 1050px) {
+  .hero { gap: 30px; }
+  .hero h1 { font-size: clamp(38px, 5vw, 58px); letter-spacing: -2px; }
 }
 </style>
 </head>
@@ -508,9 +525,7 @@ footer {
               <h3>Bootopia</h3>
 
               <p>
-                Helping soccer players find cleats
-                based on their position, playstyle,
-                and personal preferences.
+                A soccer cleat discovery app informed by player interviews and user personas. I designed personalized recommendations around playing position, comfort, and budget, developing the experience through user flows, wireframes, and interface design.
               </p>
             </div>
           </a>
@@ -531,10 +546,7 @@ footer {
               <h3>Advenza</h3>
 
               <p>
-                A travel adventure planner designed
-                to help people discover experiences,
-                personalize itineraries, and revisit
-                their favorite memories.
+                An evolving travel planning app concept that brings activity discovery, personalized filters, itineraries, and trip memories into one experience. I mapped the app structure and user flow, then developed wireframes and visual interface explorations.
               </p>
 
               <span class="project-status">
@@ -574,9 +586,7 @@ footer {
               <h3>Blue Lock FC</h3>
 
               <p>
-                An anime-inspired football game menu
-                focused on intuitive navigation,
-                contextual information, and user testing.
+                A Blue Lock inspired football game menu exploring intuitive navigation and character driven visuals. I developed a player persona, user flow, wireframes, and an interactive prototype to communicate game modes clearly.
               </p>
             </div>
           </a>
@@ -597,10 +607,7 @@ footer {
               <h3>Modern Warfare 2</h3>
 
               <p>
-                A conceptual redesign of the 2022 Modern
-                Warfare 2 main menu, focused on simplifying
-                navigation, reducing visual clutter, and
-                making game modes easier to find.
+                A conceptual redesign of the 2022 Modern Warfare II menu, exploring clearer visual hierarchy and simpler navigation while preserving the game’s identity. The case study shows the original interface, inspiration, sketches, and redesigned menu.
               </p>
             </div>
           </a>
@@ -621,10 +628,7 @@ footer {
               <h3>Crimson Clover</h3>
 
               <p>
-                A conceptual in-game HUD redesign focused on
-                clearer score and status information, widescreen
-                presentation, and readable controls during
-                fast-paced arcade gameplay.
+                A conceptual gameplay HUD redesign focused on making score, status, and other essential information easier to read during fast paced arcade action, while respecting the game’s visual identity.
               </p>
             </div>
           </a>
